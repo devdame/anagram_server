@@ -4,6 +4,5 @@ get '/' do
 end
 
 post '/word' do
-
-
+  redirect "/?word=#{params[:word]}"
 end
