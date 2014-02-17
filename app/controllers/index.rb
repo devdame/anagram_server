@@ -1,4 +1,9 @@
 get '/' do
-  # Look in app/views/index.erb
+  @word = params[:word]
   erb :index
+end
+
+post '/word' do
+
+
 end
