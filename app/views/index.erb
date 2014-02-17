@@ -1,17 +1,16 @@
 <div class="container">
-  <h1>Anagram Machine</h1>
+  <h1>Anagram-o-matic</h1>
   <% if @word %>
-    <p>Your anagrams are:<br>
+    <h3>Your anagrams are:</h3>
       <span id="anagram_list">
         <% Word.anagrams(@word).each do |word| %>
-          <%=word%>
-          <br>
+          <p><%=word%></p>
         <%end%>
-      </span></p>
+      </span>
   <% end %>
 
   <form action="/word" method="post">
-    Enter a word to find anagrams for:
+    Want to find some anagrams?  Give me a word:
     <br>
     <br>
     <input type="text" name="word">
