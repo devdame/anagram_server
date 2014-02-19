@@ -1,12 +1,15 @@
 <div class="container">
   <h1>Anagram-o-matic</h1>
-  <% if @word %>
+  <% if @results %>
     <h3>Your anagrams are:</h3>
       <span id="anagram_list">
-        <% Word.anagrams(@word).each do |word| %>
+        <% @results.each do |word| %>
           <p><%=word%></p>
         <%end%>
       </span>
+      <h1><%@test.each do |call|%>
+        <%= call %>
+      <%end%></h1>
   <% end %>
 
   <form action="/word" method="post">
