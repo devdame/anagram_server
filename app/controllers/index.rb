@@ -1,7 +1,7 @@
 get '/' do
   if params[:word]
     @results = Word.anagrams(params[:word])
-    @test = AnagramFinder.new(params[:word]).call_me
+    @test = AnagramFinder.new(params[:word]).all_matches
   end
   # @results = Anagram.run!(@word)
   erb :index
